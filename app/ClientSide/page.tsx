@@ -24,12 +24,11 @@ interface ITodo {
   }
 }
 
-const page = () => {
-  const [data, setData] = useState<ITodo[]>([]);
-  const [loading, setLoading] = useState(false)
+const Page = () => {
+   const [data, setData] = useState<ITodo[]>([]);
+    const [loading, setLoading] = useState(true);
 
-
-  useEffect(() => {
+ useEffect(() => {
       setLoading(true)
       setTimeout(() => {
           setLoading(false)
@@ -96,4 +95,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
